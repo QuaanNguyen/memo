@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "memoimg.blob.core.windows.net",
+        pathname: "/img/**",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
